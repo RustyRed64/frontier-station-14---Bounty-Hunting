@@ -1,31 +1,31 @@
-<div class="header" align="center">
-<img alt="Frontier Station" height="300" src="https://github.com/new-frontiers-14/frontier-station-14/blob/master/Resources/Textures/_NF/Logo/logo.png?raw=true" />
-</div>
+What's being worked on here is a rework of how bounty hunting is done, along with a few other goodies.
 
-Frontier Station is a fork of [Space Station 14](https://github.com/space-wizards/space-station-14) that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) engine written in C#.
+TODO LIST
 
-This is the primary repo for Frontier Station.
+- Create Bounty Hunter computer/pod (DONE)
+- Create Bounty component for capturable targets (DONE)
+- Pod accepts bounties
+- Have pod eject rewards
+- Creating new bounties dynamicly
+- Setting up bounty computer
+- Adjusting bounty encounters based on their crimes
+- Chase bounties via searching device
+- Loot system
 
-If you want to host or create content for Frontier Station, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
+EXTRA
 
-## Links
+- Unique Bounty Hunting rewards
+- New Hostile NPCs to fight
+- Expedition Lodge adjusted, now called Mercenary lodge, and has support for bounty hunting.
+- New ship type, Bounty Hunter, that are not bound to expedition ship designs, that can only be bought from the mercenary lodge.
+- Adjust sprinter to be Bounty Hunter class ship
+- Add T1 (Mule) and t3 (Buffalo, reworked Bison) bounty hunter class ships.
 
-<div class="header" align="center">  
-[Discord](https://discord.gg/tpuAT7d3zm/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Patreon](https://www.patreon.com/frontierstation14) | [Wiki](https://frontierstation.wiki.gg/)
-</div>
 
-## Documentation/Wiki
 
-Our [wiki](https://frontierstation.wiki.gg/) has documentation on Frontier Station's content.
 
-## Contributing
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of ideas](https://discord.com/channels/1123826877245694004/1127017858833068114) that can be done and anybody can pick them up. Don't be afraid to ask for help either!
-
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language, consider creating a fork or contributing to a fork.
-
-If you make any contributions, please make sure to read the markers section in [MARKERS.md](https://github.com/new-frontiers-14/frontier-station-14/blob/master/MARKERS.md)
-Any changes made to files belonging to our upstream should be properly marked in accordance to what is specified there.
+------------
 
 ## Building
 
