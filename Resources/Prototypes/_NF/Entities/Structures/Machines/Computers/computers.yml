@@ -560,3 +560,36 @@
   components:
   - type: NFDroneConsole
     id: Trade
+
+#region Mercenary
+
+# Bounty Computer
+- type: entity
+  parent: [ BaseStructureIndestructible, BaseStructureDisableToolUse, BaseComputer ]
+  id: MercBountyConsole
+  name: Mercenary Bounty Console
+  description: Allows you to pick up bounties for wanted targets thoughout the frontier.
+  suffix: Normal
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_merc
+    - map: ["computerLayerKeyboard"]
+      state: merc_keyboard
+    - map: ["computerLayerScreen"]
+      state: merc_screen
+    - map: ["computerLayerKeys"]
+      state: merc_keys
+  - type: GasSaleConsole
+  - type: ActivatableUI
+    key: enum.GasSaleConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.GasSaleConsoleUiKey.Key:
+        type: GasSaleConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: Computer
+    board: Null # FIXME

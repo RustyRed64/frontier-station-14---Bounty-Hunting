@@ -1,0 +1,24 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Original Made by whatston3 (GitHub), Edited by RustyRed",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+      "states": [
+          {
+              "name": "closed"
+          },
+          {
+              "name": "closed_full"
+          },
+          {
+              "name": "both_on_unlit"
+          },
+          {
+              "name": "left_on_unlit"
+          }
+      ]
+  }
+  

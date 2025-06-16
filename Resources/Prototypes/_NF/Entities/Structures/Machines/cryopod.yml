@@ -38,6 +38,7 @@
   components:
   - type: CryoSleepFallback
 
+# Body Retrieval Unit
 - type: entity
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseMachinePowered]
   id: MachineMedicalBountyRedemption
@@ -90,6 +91,73 @@
   - type: GenericVisualizer
     visuals:
       enum.MedicalBountyRedemptionVisuals.Full:
+        base:
+          True: { state: closed_full }
+          False: { state: closed }
+        lights:
+          True: { state: both_on_unlit }
+          False: { state: left_on_unlit }
+      enum.PowerDeviceVisuals.Powered:
+        lights:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ApcPowerReceiver
+    powerLoad: 1000 # Keeping this explicit
+  - type: Climbable
+
+# Mercenary Bounty Retrieval Unit
+- type: entity
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseMachinePowered]
+  id: BountyHunterRetrievalUnit
+  name: Bounty Retrieval Unit
+  description: A teleporter to return people with bounties on their heads. Dispenses payment on teleport.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/bounty_retrieval_unit.rsi
+    snapCardinals: true # Frontier
+    layers:
+    - state: closed
+      map: ["base"]
+    - state: left_on_unlit
+      shader: unshaded
+      map: ["lights"]
+      visible: false
+  - type: UserInterface
+    interfaces:
+      enum.BountyHunterRedemptionUiKey.Key:
+        type: BountyHunterRedemptionBoundUserInterface
+  - type: ActivatableUI
+    key: enum.BountyHunterRedemptionUiKey.Key
+  - type: ActivatableUIRequiresPower
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: DragInsertContainer
+    containerId: Bounty_Container
+  - type: ExitContainerOnMove
+    containerId: Bounty_Container
+  - type: ContainerContainer
+    containers:
+      Bounty_Container: !type:ContainerSlot
+  - type: BountyHunterRedemption
+    bodyContainer: Bounty_Container
+    taxAccounts:
+      Medical: 0.75 # 75%
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.BountyHunterRedemptionVisuals.Full:
         base:
           True: { state: closed_full }
           False: { state: closed }
