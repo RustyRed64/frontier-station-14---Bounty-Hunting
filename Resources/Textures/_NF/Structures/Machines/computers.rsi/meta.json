@@ -123,6 +123,36 @@
                 ]
             ]
         },
+                {
+            "name": "shipyard_merc",
+            "directions": 4,
+            "delays": [
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ]
+            ]
+        },
         {
             "name": "shipyard_security",
             "directions": 4,
