@@ -11,8 +11,8 @@ public sealed partial class BountyHunterRedemptionComponent : Component
     /// <summary>
     /// The name of the container that holds bounty bounties to be redeemed.
     /// </summary>
-    ///[DataField(required: true)]
-    [DataField]
+    [DataField(required: true)]
+    ///[DataField]
     public string Bounty_Container;
 
     /// <summary>

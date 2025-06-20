@@ -196,8 +196,8 @@
 - type: entity
   id: ComputerShipyardExpedition
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyard]
-  name: expedition shipyard console
-  description: Used to buy ships outfitted for planetary expeditions.
+  name: Mercenary shipyard console
+  description: Used to buy ships outfitted for planetary expeditions and bounty hunting.
   components:
   - type: ActivatableUI
     key: enum.ShipyardConsoleUiKey.Expedition
